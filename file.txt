@@ -1,0 +1,36 @@
+Platform Tiket Event Online
+Backend system untuk platform pemesanan tiket event dengan mekanisme anti-overselling.
+
+Features
+
+✅ CRUD Users, Events, Bookings
+✅ Anti-overselling mechanism dengan database transaction
+✅ Row locking untuk prevent race condition
+✅ RESTful API dengan Gin Framework
+✅ MySQL database dengan foreign key constraints
+Tech Stack
+
+Language: Go (Golang) 1.20+
+Framework: Gin Web Framework
+Database: MySQL 8.0+
+Driver: go-sql-driver/mysql
+Installation Prerequisites
+
+Go 1.20 or higher
+MySQL 8.0 or higher
+Git
+Setup
+
+Clone repository:
+git clone https://github.com/Raffi193/ticket-platform.git
+cd ticket-platform
+Install dependencies:
+go mod download
+Setup database:
+mysql -u root -p < schema.sql
+Configure environment:
+cp .env.example .env
+# Edit .env dengan kredensial database Anda
+Run application:
+go run main.go
+Server akan running di http://localhost:8080
